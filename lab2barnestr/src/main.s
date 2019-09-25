@@ -2,7 +2,8 @@
 # Trevor Barnes
 # CE2801-031
 # Lab 2: Knight Rider Lights
-# Description: This 
+# Description: This routine causes the lights on the demo board to move in a back and forth
+#              pattern like the lights from Knight Rider
 
 # Lights are on PB5-PB15 except PB11
 

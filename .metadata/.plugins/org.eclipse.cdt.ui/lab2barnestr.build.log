@@ -1,6 +1,6 @@
-16:37:35 **** Incremental Build of configuration Debug for project lab2barnestr ****
+14:59:00 **** Incremental Build of configuration Debug for project lab2barnestr ****
 make all 
 make: Nothing to be done for 'all'.
 
-16:37:35 Build Finished (took 165ms)
+14:59:01 Build Finished (took 632ms)
 
