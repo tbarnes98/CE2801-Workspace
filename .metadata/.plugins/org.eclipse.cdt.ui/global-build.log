@@ -1,0 +1,225 @@
+15:49:38 **** Build of configuration Debug for project lab1 ****
+make all 
+Building file: ../startup/startup_stm32.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab1\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+Finished building: ../startup/startup_stm32.s
+ 
+Building file: ../startup/sysmem.c
+Invoking: MCU GCC Compiler
+C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab1\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+Finished building: ../startup/sysmem.c
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab1\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab1.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab1\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab1.elf" @"objects.list"   -lm
+Finished building target: lab1.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab1.elf" "lab1.bin"
+arm-none-eabi-size "lab1.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1052	   1080	   1092	   3224	    c98	lab1.elf
+ 
+15:50:36 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Nothing to be done for 'all'.
+15:59:45 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Nothing to be done for 'all'.
+16:00:39 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Nothing to be done for 'all'.
+16:01:55 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Nothing to be done for 'all'.
+16:02:34 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Nothing to be done for 'all'.
+16:04:25 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Nothing to be done for 'all'.
+16:09:21 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Nothing to be done for 'all'.
+16:22:18 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Nothing to be done for 'all'.
+15:25:23 **** Build of configuration Debug for project lab1 ****
+make all 
+make: Nothing to be done for 'all'.
+15:56:13 **** Incremental Build of configuration Debug for project lab1 ****
+make all 
+make: Nothing to be done for 'all'.
+15:56:13 **** Build of configuration Debug for project lab2barnestr ****
+make all 
+Building file: ../startup/startup_stm32.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab2barnestr\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+Finished building: ../startup/startup_stm32.s
+ 
+Building file: ../startup/sysmem.c
+Invoking: MCU GCC Compiler
+C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab2barnestr\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+Finished building: ../startup/sysmem.c
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab2barnestr\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2barnestr.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab2barnestr\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2barnestr.elf" @"objects.list"   -lm
+Finished building target: lab2barnestr.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2barnestr.elf" "lab2barnestr.bin"
+arm-none-eabi-size "lab2barnestr.elf"
+   text	   data	    bss	    dec	    hex	filename
+    988	   1080	   1092	   3160	    c58	lab2barnestr.elf
+ 
+15:57:10 **** Incremental Build of configuration Debug for project lab2barnestr ****
+make all 
+make: Nothing to be done for 'all'.
+15:57:54 **** Incremental Build of configuration Debug for project lab2barnestr ****
+make all 
+make: Nothing to be done for 'all'.
+15:58:10 **** Incremental Build of configuration Debug for project lab2barnestr ****
+make all 
+make: Nothing to be done for 'all'.
+16:12:34 **** Incremental Build of configuration Debug for project lab2barnestr ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab2barnestr\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2barnestr.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab2barnestr\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2barnestr.elf" @"objects.list"   -lm
+Finished building target: lab2barnestr.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2barnestr.elf" "lab2barnestr.bin"
+arm-none-eabi-size "lab2barnestr.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1032	   1080	   1092	   3204	    c84	lab2barnestr.elf
+ 
+16:15:06 **** Incremental Build of configuration Debug for project lab2barnestr ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab2barnestr\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2barnestr.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\OneDrive - Milwaukee School of Engineering\Documents\2019-2020\workspace\lab2barnestr\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2barnestr.elf" @"objects.list"   -lm
+Finished building target: lab2barnestr.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2barnestr.elf" "lab2barnestr.bin"
+arm-none-eabi-size "lab2barnestr.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1036	   1080	   1092	   3208	    c88	lab2barnestr.elf
+ 
+16:17:42 **** Incremental Build of configuration Debug for project lab2barnestr ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab2barnestr\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2barnestr.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab2barnestr\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2barnestr.elf" @"objects.list"   -lm
+Finished building target: lab2barnestr.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2barnestr.elf" "lab2barnestr.bin"
+arm-none-eabi-size "lab2barnestr.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1036	   1080	   1092	   3208	    c88	lab2barnestr.elf
+ 
+16:18:21 **** Clean-only build of configuration Debug for project lab2barnestr ****
+make clean 
+rm -rf *
+ 
+16:18:37 **** Build of configuration Debug for project lab2barnestr ****
+make all 
+Building file: ../startup/startup_stm32.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab2barnestr\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+Finished building: ../startup/startup_stm32.s
+ 
+Building file: ../startup/sysmem.c
+Invoking: MCU GCC Compiler
+C:\Users\barnestr\Documents\CE2801\workspace\lab2barnestr\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+Finished building: ../startup/sysmem.c
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab2barnestr\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2barnestr.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab2barnestr\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2barnestr.elf" @"objects.list"   -lm
+Finished building target: lab2barnestr.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2barnestr.elf" "lab2barnestr.bin"
+arm-none-eabi-size "lab2barnestr.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1036	   1080	   1092	   3208	    c88	lab2barnestr.elf
+ 
+16:18:43 **** Incremental Build of configuration Debug for project lab2barnestr ****
+make all 
+make: Nothing to be done for 'all'.
+16:37:17 **** Incremental Build of configuration Debug for project lab2barnestr ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab2barnestr\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2barnestr.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab2barnestr\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2barnestr.elf" @"objects.list"   -lm
+Finished building target: lab2barnestr.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2barnestr.elf" "lab2barnestr.bin"
+arm-none-eabi-size "lab2barnestr.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1064	   1080	   1092	   3236	    ca4	lab2barnestr.elf
+ 
+16:37:35 **** Incremental Build of configuration Debug for project lab2barnestr ****
+make all 
+make: Nothing to be done for 'all'.
