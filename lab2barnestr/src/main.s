@@ -14,8 +14,12 @@
 
     # Base RCC
     .equ RCC_BASE, 0x40023800
+    # GPIOB Enable Register
     .equ RCC_AHB1ENR, 0x30
+    # GPIOB Enable
     .equ RCC_GPIOBEN, 1<<1
+    # Bit Set Reset Register
+    .equ GPIOx_BSRR, 0x18
 
     .equ GPIOB_BASE, 0x40020400
     # GPIO Mode Register
@@ -61,7 +65,7 @@ turn_on:
     # Wait
     bl delay
     
-    # Turn of all lights
+    # Turn off all lights
     ldr r2, [r1, #GPIO_ODR]
     movw r3, #0xF7E0
     orr r2, r2, r3
