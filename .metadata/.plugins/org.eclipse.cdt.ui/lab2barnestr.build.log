@@ -1,4 +1,4 @@
-20:37:23 **** Incremental Build of configuration Debug for project lab2barnestr ****
+15:20:49 **** Incremental Build of configuration Debug for project lab2barnestr ****
 make all 
 Building file: ../src/main.s
 Invoking: MCU GCC Assembler
@@ -19,5 +19,5 @@ arm-none-eabi-size "lab2barnestr.elf"
    1104	   1080	   1092	   3276	    ccc	lab2barnestr.elf
  
 
-20:37:24 Build Finished (took 1s.165ms)
+15:20:51 Build Finished (took 2s.165ms)
 

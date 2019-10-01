@@ -108,4 +108,3 @@ delay:
     # Branch backward to local label if not equal to 0
     bne 1b
     bx lr
-
