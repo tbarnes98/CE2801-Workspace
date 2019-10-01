@@ -19,7 +19,7 @@
     # GPIOB Enable
     .equ RCC_GPIOBEN, 1<<1
     # Bit Set Reset Register
-    .equ GPIOx_BSRR, 0x18
+    .equ GPIOB_BSRR, 0x18
 
     .equ GPIOB_BASE, 0x40020400
     # GPIO Mode Register
@@ -55,33 +55,58 @@ main:
 
     str r2, [r1, #GPIO_MODER]
 
-turn_on:
-    # Turn on all lights
-    ldr r2, [r1, #GPIO_ODR]
-    movw r3, #0xF7E0
-    orr r2, r2, r3
-    str r2, [r1, #GPIO_ODR]
+    # Set the starting on bit (one less than the right most LED bit)
+    movw r3, #0x0010
 
-    # Wait
+scroll_left:
+    # Move ON bit one position to the left
+    lsl r3, r3, #1
+    # Read current data
+    ldr r2, [r1, #GPIO_ODR]
+    # Clear previous ON bit, default 0
+    bic r2, r4
+    # Write new data
+    orr r2, r2, r3
+    # Skip if PB11 "pin"
+    cmp r3, 0x0800
+    beq scroll_left
+    # Write data back
+    str r2, [r1, #GPIO_ODR]
+    # Write the current ON bit to be cleared next cycle
+    mov r4, r3
     bl delay
-    
-    # Turn off all lights
-    ldr r2, [r1, #GPIO_ODR]
-    movw r3, #0xF7E0
-    orr r2, r2, r3
-    str r2, [r1, #GPIO_ODR]
-    # Wait
+    # Loop back until the leftmost pin is on
+    cmp r3, 0x8000
+    bne scroll_left
 
-    # Go back to turn on al lights
-    b turn_on
+scroll_right:
+    # Move ON bit one position to the right
+    lsr r3, r3, #1
+    # Read current data
+    ldr r2, [r1, #GPIO_ODR]
+    # Clear previous ON bit, default 0
+    bic r2, r4
+    # Write new data
+    orr r2, r2, r3
+    # Skip if PB11 "pin"
+    cmp r3, 0x0800
+    beq scroll_right
+    # Write data back
+    str r2, [r1, #GPIO_ODR]
+    # Write the current ON bit to be cleared next cycle
+    mov r4, r3
+    bl delay
+    # Loop back until the rightmost pin is on
+    cmp r3, 0x0020
+    bne scroll_right
+    b scroll_left
 
 delay:
-    ldr r12, =0x002000000
+    # Arbitrary delay length
+    ldr r12, =0x00050000
 1:
-
     subs r12, r12,#1
-    # Bracnch backward to local label if not equal to 0
+    # Branch backward to local label if not equal to 0
     bne 1b
     bx lr
-end:
-    b end
+

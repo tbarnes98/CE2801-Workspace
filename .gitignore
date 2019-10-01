@@ -3,3 +3,6 @@
 \lab2barnestr\NUCLEO-F446RE.xml
 \lab2barnestr\.settings\**
 \.metadata
+\lab2barnestr\lab2barnestr.bin
+\lab2barnestr\lab2barnestr.elf
+\lab2barnestr\output.map
