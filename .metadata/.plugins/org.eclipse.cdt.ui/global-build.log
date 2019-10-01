@@ -899,3 +899,66 @@ arm-none-eabi-size "lab2barnestr.elf"
    text	   data	    bss	    dec	    hex	filename
    1104	   1080	   1092	   3276	    ccc	lab2barnestr.elf
  
+15:45:01 **** Incremental Build of configuration Debug for project lab2barnestr ****
+make all 
+make: Nothing to be done for 'all'.
+16:03:06 **** Build of configuration Debug for project lab3subroutines ****
+make all 
+Building file: ../startup/startup_stm32.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+Finished building: ../startup/startup_stm32.s
+ 
+Building file: ../startup/sysmem.c
+Invoking: MCU GCC Compiler
+C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+Finished building: ../startup/sysmem.c
+ 
+Building file: ../src/gpio.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/gpio.o" "../src/gpio.s"
+Finished building: ../src/gpio.s
+ 
+Building file: ../src/led.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/led.o" "../src/led.s"
+Finished building: ../src/led.s
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab3subroutines.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab3subroutines.elf" @"objects.list"   -lm
+startup/startup_stm32.o: In function `LoopFillZerobss':
+C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\Debug/../startup/startup_stm32.s:78: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [lab3subroutines.elf] Error 1
+makefile:34: recipe for target 'lab3subroutines.elf' failed
+16:03:55 **** Incremental Build of configuration Debug for project lab3subroutines ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab3subroutines.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab3subroutines.elf" @"objects.list"   -lm
+Finished building target: lab3subroutines.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab3subroutines.elf" "lab3subroutines.bin"
+arm-none-eabi-size "lab3subroutines.elf"
+   text	   data	    bss	    dec	    hex	filename
+    972	   1080	   1092	   3144	    c48	lab3subroutines.elf
+ 

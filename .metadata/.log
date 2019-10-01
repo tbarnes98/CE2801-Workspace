@@ -2241,3 +2241,6 @@ Error erasing flash with vFlashErase packet
 java.lang.Exception: Error erasing flash with vFlashErase packet
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-01 15:49:10.425
+!MESSAGE Indexed 'lab3subroutines' (1 sources, 33 headers) in 0.605 sec: 1,056 declarations; 1,872 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
