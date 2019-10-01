@@ -18,9 +18,8 @@
     .equ RCC_AHB1ENR, 0x30
     # GPIOB Enable
     .equ RCC_GPIOBEN, 1<<1
-    # Bit Set Reset Register
-    .equ GPIOB_BSRR, 0x18
 
+    # Base GPIOB Location
     .equ GPIOB_BASE, 0x40020400
     # GPIO Mode Register
     .equ GPIO_MODER, 0x00

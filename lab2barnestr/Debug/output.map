@@ -447,9 +447,9 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15
                 0x0000020c       0x22 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(lab2barnestr.elf elf32-littlearm)
 
-.debug_line     0x00000000       0xe7
- .debug_line    0x00000000       0x6e src/main.o
- .debug_line    0x0000006e       0x79 startup/startup_stm32.o
+.debug_line     0x00000000       0xe5
+ .debug_line    0x00000000       0x6c src/main.o
+ .debug_line    0x0000006c       0x79 startup/startup_stm32.o
 
 .debug_info     0x00000000       0xf5
  .debug_info    0x00000000       0x76 src/main.o

@@ -859,3 +859,23 @@ arm-none-eabi-size "lab2barnestr.elf"
 20:27:00 **** Incremental Build of configuration Debug for project lab2barnestr ****
 make all 
 make: Nothing to be done for 'all'.
+20:37:23 **** Incremental Build of configuration Debug for project lab2barnestr ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab2barnestr\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab2barnestr.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab2barnestr\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab2barnestr.elf" @"objects.list"   -lm
+Finished building target: lab2barnestr.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab2barnestr.elf" "lab2barnestr.bin"
+arm-none-eabi-size "lab2barnestr.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1104	   1080	   1092	   3276	    ccc	lab2barnestr.elf
+ 
