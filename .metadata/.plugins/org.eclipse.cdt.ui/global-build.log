@@ -2131,3 +2131,39 @@ arm-none-eabi-size "lab3subroutines.elf"
    text	   data	    bss	    dec	    hex	filename
    1420	   1080	   1092	   3592	    e08	lab3subroutines.elf
  
+18:57:54 **** Incremental Build of configuration Debug for project lab3subroutines ****
+make all 
+Building file: ../src/led.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/led.o" "../src/led.s"
+Finished building: ../src/led.s
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab3subroutines.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab3subroutines.elf" @"objects.list"   -lm
+Finished building target: lab3subroutines.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab3subroutines.elf" "lab3subroutines.bin"
+arm-none-eabi-size "lab3subroutines.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1372	   1080	   1092	   3544	    dd8	lab3subroutines.elf
+ 
+18:59:11 **** Incremental Build of configuration Debug for project lab3subroutines ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:63: Error: invalid constant (270f) after fixup
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1

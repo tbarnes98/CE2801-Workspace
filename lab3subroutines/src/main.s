@@ -2,7 +2,9 @@
 # Trevor Barnes
 # CE2801-031
 # Lab 3: Subroutines
-# Description:
+# Description: The driver for Lab 3. Displays the binary ASCII 
+#              value of the hardcoded number "1234", one character 
+#              at a time every half second.
 
 .syntax unified
 .cpu cortex-m4
@@ -21,7 +23,7 @@ main_loop:
     mov r0, #1234
     bl num_to_ASCII
     mov r1, r0
-    # r1 is 4 character ASCII value
+    # r1 is a 4 character ASCII value
     mov r0, #500
     # Display 1
    	ubfx r0, r1, #24, #8
@@ -45,11 +47,7 @@ main_loop:
     bl delay_ms
     b main_loop
 
-
-end:
-    b end
 .global num_to_ASCII
-
 # Takes in a value from 0-9999 and converts it to ASCII
 # Input:
 #       r0: Input binary value
@@ -62,10 +60,10 @@ num_to_ASCII:
 
     cmp r0,#0
     blt out_of_range
-    @ cmp r0,#9999
-    @ bgt out_of_range
+    cmp r0,#9999
+    bgt out_of_range
 
-    # Normal conversion behavior
+# Normal conversion behavior
     mov r1, #16
     lsl r0, #3
     sub r1, #3
@@ -106,7 +104,6 @@ end_verify_nibbles:
     bne shift_cycle
     mov r3, #3
 # Encode BCD numbers to ASCII
-
     # Extract ones nibble
     ubfx r2, r0, #16, #4
     # Insert ones nibble
@@ -142,6 +139,7 @@ out_of_range:
     movt r1, #0x4572
 
 end_ASCII:
+    # Return value in r0
 	mov r0, r1
     pop {r1,r2,r3,lr}
     bx lr

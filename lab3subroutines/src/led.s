@@ -60,35 +60,6 @@ num_to_LED_init:
     # Branch back to link location
     bx lr
 
-.global LED_test_loop
-
-LED_test_loop:
-
-    push {r0,r1,r2,lr}
-
-    bl num_to_LED_init
-    ldr r1, =GPIOB_BASE
-
-loop:
-
-    ldr r2,[r1,#GPIO_ODR]
-    orr r2,r2,#0x0020
-    str r2,[r1,#GPIO_ODR]
-
-    mov r0, #0x3E8
-    bl delay_ms
-
-    ldr r2,[r1,#GPIO_ODR]
-    bic r2,r2,#0x0020
-    str r2,[r1,#GPIO_ODR]
-
-    mov r0, #0x3E8
-    bl delay_ms
-
-    b loop
-
-    pop {r0,r1,r2,pc}
-
 .global num_to_LED
 # Takes in a 10-bit value and displays it on the LEDs in binary
 # Input:
