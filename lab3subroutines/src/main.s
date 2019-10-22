@@ -60,8 +60,8 @@ num_to_ASCII:
 
     cmp r0,#0
     blt out_of_range
-    cmp r0,#9999
-    bgt out_of_range
+    # cmp r0,#9999
+    # bgt out_of_range
 
 # Normal conversion behavior
     mov r1, #16

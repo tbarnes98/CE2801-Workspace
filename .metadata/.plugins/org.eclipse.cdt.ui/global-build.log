@@ -2167,3 +2167,2981 @@ arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -
 ../src/main.s:63: Error: invalid constant (270f) after fixup
 src/subdir.mk:21: recipe for target 'src/main.o' failed
 make: *** [src/main.o] Error 1
+19:10:17 **** Incremental Build of configuration Debug for project lab3subroutines ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab3subroutines.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab3subroutines\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab3subroutines.elf" @"objects.list"   -lm
+Finished building target: lab3subroutines.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab3subroutines.elf" "lab3subroutines.bin"
+arm-none-eabi-size "lab3subroutines.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1372	   1080	   1092	   3544	    dd8	lab3subroutines.elf
+ 
+20:11:40 **** Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../startup/startup_stm32.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "startup/startup_stm32.o" "../startup/startup_stm32.s"
+Finished building: ../startup/startup_stm32.s
+ 
+Building file: ../startup/sysmem.c
+Invoking: MCU GCC Compiler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DDEBUG -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/sysmem.d" -MT"startup/sysmem.o" -o "startup/sysmem.o" "../startup/sysmem.c"
+Finished building: ../startup/sysmem.c
+ 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:24: Error: bad expression
+../src/lcd.s:24: Error: junk at end of line, first unrecognized character is `8'
+../src/lcd.s:25: Error: bad expression
+../src/lcd.s:25: Error: junk at end of line, first unrecognized character is `9'
+../src/lcd.s:26: Error: bad expression
+../src/lcd.s:26: Error: junk at end of line, first unrecognized character is `1'
+../src/lcd.s:89: Error: ARM register expected -- `push { }'
+../src/lcd.s:95: Error: cannot use register index with PC-relative addressing -- `str r3,RS_CLR'
+../src/lcd.s:96: Error: cannot use register index with PC-relative addressing -- `str r3,RW_CLR'
+../src/lcd.s:97: Error: cannot use register index with PC-relative addressing -- `str r3,E_CLR'
+../src/lcd.s:107: Error: ARM register expected -- `pop { }'
+../src/lcd.s:115: Error: ARM register expected -- `push { }'
+../src/lcd.s:127: Error: ARM register expected -- `pop { }'
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:17: recipe for target 'src/lcd.o' failed
+20:13:47 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s: Warning: end of file not at end of a line; newline inserted
+../src/delay.s:48: Error: instruction not supported in Thumb16 mode -- `subs r1,r1,#1'
+src/subdir.mk:19: recipe for target 'src/delay.o' failed
+make: *** [src/delay.o] Error 1
+20:18:55 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/delay.s
+ 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:29: Warning: shift count out of range (256 is not between 0 and 31)
+../src/lcd.s:30: Warning: shift count out of range (272 is not between 0 and 31)
+../src/lcd.s:31: Warning: shift count out of range (512 is not between 0 and 31)
+../src/lcd.s:32: Warning: shift count out of range (528 is not between 0 and 31)
+../src/lcd.s:33: Warning: shift count out of range (0x00000400 is not between 0x00000000 and 0x0000001f)
+../src/lcd.s:34: Warning: shift count out of range (0x00000410 is not between 0x00000000 and 0x0000001f)
+../src/lcd.s:95: Error: cannot use register index with PC-relative addressing -- `str r3,RS_CLR'
+../src/lcd.s:96: Error: cannot use register index with PC-relative addressing -- `str r3,RW_CLR'
+../src/lcd.s:97: Error: cannot use register index with PC-relative addressing -- `str r3,E_CLR'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+20:19:57 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:29: Warning: shift count out of range (256 is not between 0 and 31)
+../src/lcd.s:30: Warning: shift count out of range (272 is not between 0 and 31)
+../src/lcd.s:31: Warning: shift count out of range (512 is not between 0 and 31)
+../src/lcd.s:32: Warning: shift count out of range (528 is not between 0 and 31)
+../src/lcd.s:33: Warning: shift count out of range (0x00000400 is not between 0x00000000 and 0x0000001f)
+../src/lcd.s:34: Warning: shift count out of range (0x00000410 is not between 0x00000000 and 0x0000001f)
+../src/lcd.s:95: Error: cannot use register index with PC-relative addressing -- `str r3,#RS_CLR'
+../src/lcd.s:96: Error: cannot use register index with PC-relative addressing -- `str r3,#RW_CLR'
+../src/lcd.s:97: Error: cannot use register index with PC-relative addressing -- `str r3,#E_CLR'
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+20:22:38 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:24: Error: bad expression
+../src/lcd.s:24: Error: junk at end of line, first unrecognized character is `0'
+../src/lcd.s:25: Error: bad expression
+../src/lcd.s:25: Error: junk at end of line, first unrecognized character is `0'
+../src/lcd.s:26: Error: bad expression
+../src/lcd.s:26: Error: junk at end of line, first unrecognized character is `0'
+../src/lcd.s:95: Error: cannot use register index with PC-relative addressing -- `str r3,RS_CLR'
+../src/lcd.s:96: Error: cannot use register index with PC-relative addressing -- `str r3,RW_CLR'
+../src/lcd.s:97: Error: cannot use register index with PC-relative addressing -- `str r3,E_CLR'
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+20:23:32 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:29: Warning: shift count out of range (128 is not between 0 and 31)
+../src/lcd.s:30: Warning: shift count out of range (144 is not between 0 and 31)
+../src/lcd.s:31: Warning: shift count out of range (256 is not between 0 and 31)
+../src/lcd.s:32: Warning: shift count out of range (272 is not between 0 and 31)
+../src/lcd.s:33: Warning: shift count out of range (512 is not between 0 and 31)
+../src/lcd.s:34: Warning: shift count out of range (528 is not between 0 and 31)
+../src/lcd.s:95: Error: cannot use register index with PC-relative addressing -- `str r3,RS_CLR'
+../src/lcd.s:96: Error: cannot use register index with PC-relative addressing -- `str r3,RW_CLR'
+../src/lcd.s:97: Error: cannot use register index with PC-relative addressing -- `str r3,E_CLR'
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+20:25:21 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:24: Error: bad expression
+../src/lcd.s:24: Error: junk at end of line, first unrecognized character is `8'
+../src/lcd.s:25: Error: bad expression
+../src/lcd.s:25: Error: junk at end of line, first unrecognized character is `9'
+../src/lcd.s:26: Error: bad expression
+../src/lcd.s:26: Error: junk at end of line, first unrecognized character is `1'
+../src/lcd.s:95: Error: cannot use register index with PC-relative addressing -- `str r3,RS_CLR'
+../src/lcd.s:96: Error: cannot use register index with PC-relative addressing -- `str r3,RW_CLR'
+../src/lcd.s:97: Error: cannot use register index with PC-relative addressing -- `str r3,E_CLR'
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+20:25:51 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:24: Error: bad expression
+../src/lcd.s:24: Error: junk at end of line, first unrecognized character is `0'
+../src/lcd.s:25: Error: bad expression
+../src/lcd.s:25: Error: junk at end of line, first unrecognized character is `9'
+../src/lcd.s:26: Error: bad expression
+../src/lcd.s:26: Error: junk at end of line, first unrecognized character is `1'
+../src/lcd.s:95: Error: cannot use register index with PC-relative addressing -- `str r3,RS_CLR'
+../src/lcd.s:96: Error: cannot use register index with PC-relative addressing -- `str r3,RW_CLR'
+../src/lcd.s:97: Error: cannot use register index with PC-relative addressing -- `str r3,E_CLR'
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+20:26:10 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:25: Error: bad expression
+../src/lcd.s:25: Error: junk at end of line, first unrecognized character is `9'
+../src/lcd.s:26: Error: bad expression
+../src/lcd.s:26: Error: junk at end of line, first unrecognized character is `1'
+../src/lcd.s:95: Error: cannot use register index with PC-relative addressing -- `str r3,RS_CLR'
+../src/lcd.s:96: Error: cannot use register index with PC-relative addressing -- `str r3,RW_CLR'
+../src/lcd.s:97: Error: cannot use register index with PC-relative addressing -- `str r3,E_CLR'
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+20:26:39 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:95: Error: cannot use register index with PC-relative addressing -- `str r3,RS_CLR'
+../src/lcd.s:96: Error: cannot use register index with PC-relative addressing -- `str r3,RW_CLR'
+../src/lcd.s:97: Error: cannot use register index with PC-relative addressing -- `str r3,E_CLR'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+20:27:20 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:95: Error: invalid pseudo operation -- `str r3,=RS_CLR'
+../src/lcd.s:96: Error: invalid pseudo operation -- `str r3,=RW_CLR'
+../src/lcd.s:97: Error: invalid pseudo operation -- `str r3,=E_CLR'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+20:27:41 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:95: Error: cannot use register index with PC-relative addressing -- `str r3,#RS_CLR'
+../src/lcd.s:96: Error: cannot use register index with PC-relative addressing -- `str r3,#RW_CLR'
+../src/lcd.s:97: Error: cannot use register index with PC-relative addressing -- `str r3,#E_CLR'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+20:28:39 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:95: Error: offset out of range
+../src/lcd.s:96: Error: offset out of range
+../src/lcd.s:97: Error: offset out of range
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+20:30:58 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:95: Error: bad expression -- `str r3,[r2,=RS_CLR]'
+../src/lcd.s:96: Error: bad expression -- `str r3,[r2,=RW_CLR]'
+../src/lcd.s:97: Error: bad expression -- `str r3,[r2,=E_CLR]'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+20:42:10 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:67: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../src/lcd.s:80: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+20:43:40 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:67: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../src/lcd.s:80: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+20:46:00 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:67: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../src/lcd.s:80: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+21:06:02 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:67: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../src/lcd.s:80: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+21:11:39 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:98: Error: ARM register expected -- `str '
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+21:11:48 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:67: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../src/lcd.s:80: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+21:12:54 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:98: Error: cannot use register index with PC-relative addressing -- `str r2,r3'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+21:13:19 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:96: Error: bad expression -- `mov r2,=RS_CLR'
+../src/lcd.s:98: Error: cannot use register index with PC-relative addressing -- `str r2,r3'
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+21:13:27 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:98: Error: cannot use register index with PC-relative addressing -- `str r2,r3'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+21:13:58 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:67: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../src/lcd.s:80: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+21:15:37 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:99: Error: cannot use register index with PC-relative addressing -- `str r2,r3'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+21:20:37 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:67: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../src/lcd.s:80: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../src/lcd.s:98: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+21:28:28 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:67: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../src/lcd.s:80: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+21:31:08 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:67: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../src/lcd.s:79: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+21:31:29 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+src/main.o: In function `main':
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug/../src/main.s:17: undefined reference to `lcdInit'
+collect2.exe: error: ld returned 1 exit status
+makefile:34: recipe for target 'lab4lcd.elf' failed
+make: *** [lab4lcd.elf] Error 1
+21:32:07 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+src/main.o: In function `main':
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug/../src/main.s:17: undefined reference to `lcdInit'
+collect2.exe: error: ld returned 1 exit status
+make: *** [lab4lcd.elf] Error 1
+makefile:34: recipe for target 'lab4lcd.elf' failed
+21:32:33 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+src/main.o: In function `main':
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug/../src/main.s:17: undefined reference to `lcdInit'
+collect2.exe: error: ld returned 1 exit status
+makefile:34: recipe for target 'lab4lcd.elf' failed
+make: *** [lab4lcd.elf] Error 1
+21:32:41 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1088	   1080	   1092	   3260	    cbc	lab4lcd.elf
+ 
+21:33:11 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+21:36:21 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1096	   1080	   1092	   3268	    cc4	lab4lcd.elf
+ 
+21:45:59 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1116	   1080	   1092	   3288	    cd8	lab4lcd.elf
+ 
+22:05:15 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1120	   1080	   1092	   3292	    cdc	lab4lcd.elf
+ 
+22:35:25 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1124	   1080	   1092	   3296	    ce0	lab4lcd.elf
+ 
+22:39:08 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:113: Error: undefined symbol E_RST used as an immediate value
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+22:39:44 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1132	   1080	   1092	   3304	    ce8	lab4lcd.elf
+ 
+22:40:17 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s: Warning: end of file not at end of a line; newline inserted
+../src/delay.s:48: Error: instruction not supported in Thumb16 mode -- `subs r1,r1,#1'
+src/subdir.mk:19: recipe for target 'src/delay.o' failed
+make: *** [src/delay.o] Error 1
+22:40:38 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/delay.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1132	   1080	   1092	   3304	    ce8	lab4lcd.elf
+ 
+22:41:02 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/delay.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1132	   1080	   1092	   3304	    ce8	lab4lcd.elf
+ 
+23:04:55 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/delay.s
+ 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1272	   1080	   1092	   3444	    d74	lab4lcd.elf
+ 
+23:05:01 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+23:05:10 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+23:05:42 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+09:51:07 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+15:27:49 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/delay.s
+ 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1276	   1080	   1092	   3448	    d78	lab4lcd.elf
+ 
+15:28:59 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+15:43:21 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+15:44:05 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+15:59:20 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1276	   1080	   1092	   3448	    d78	lab4lcd.elf
+ 
+16:01:18 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1276	   1080	   1092	   3448	    d78	lab4lcd.elf
+ 
+16:12:29 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:195: Error: missing expression -- `mov r1,'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+16:19:16 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1296	   1080	   1092	   3468	    d8c	lab4lcd.elf
+ 
+15:57:39 **** Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1296	   1080	   1092	   3468	    d8c	lab4lcd.elf
+ 
+19:51:48 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1304	   1080	   1092	   3476	    d94	lab4lcd.elf
+ 
+19:54:46 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+19:58:57 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1308	   1080	   1092	   3480	    d98	lab4lcd.elf
+ 
+19:59:12 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+19:59:19 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+20:00:42 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+20:05:21 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1308	   1080	   1092	   3480	    d98	lab4lcd.elf
+ 
+20:07:24 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1308	   1080	   1092	   3480	    d98	lab4lcd.elf
+ 
+20:07:32 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+20:07:42 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+20:09:26 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1320	   1080	   1092	   3492	    da4	lab4lcd.elf
+ 
+20:09:43 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+20:11:01 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1320	   1080	   1092	   3492	    da4	lab4lcd.elf
+ 
+20:35:43 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1352	   1080	   1092	   3524	    dc4	lab4lcd.elf
+ 
+20:35:48 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+20:37:12 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1356	   1080	   1092	   3528	    dc8	lab4lcd.elf
+ 
+20:47:06 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+src/lcd.o: In function `lcdClear':
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug/../src/lcd.s:205: undefined reference to `ms_delay'
+src/lcd.o: In function `lcdHome':
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug/../src/lcd.s:218: undefined reference to `ms_delay'
+collect2.exe: error: ld returned 1 exit status
+make: *** [lab4lcd.elf] Error 1
+makefile:34: recipe for target 'lab4lcd.elf' failed
+20:47:50 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1420	   1080	   1092	   3592	    e08	lab4lcd.elf
+ 
+20:51:50 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1420	   1080	   1092	   3592	    e08	lab4lcd.elf
+ 
+20:56:02 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1420	   1080	   1092	   3592	    e08	lab4lcd.elf
+ 
+20:57:01 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1420	   1080	   1092	   3592	    e08	lab4lcd.elf
+ 
+20:58:43 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1428	   1080	   1092	   3600	    e10	lab4lcd.elf
+ 
+20:59:12 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1424	   1080	   1092	   3596	    e0c	lab4lcd.elf
+ 
+21:31:31 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:43: Error: backward ref to unknown label "1:"
+../src/main.s:46: Error: PC not allowed in register list -- `push {r0,r1,pc}'
+src/subdir.mk:19: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+21:32:03 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:43: Error: backward ref to unknown label "1:"
+src/subdir.mk:19: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+21:32:50 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+../src/main.s: Assembler messages:
+../src/main.s:43: Error: backward ref to unknown label "1:"
+make: *** [src/main.o] Error 1
+src/subdir.mk:19: recipe for target 'src/main.o' failed
+21:33:15 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+src/lcd.o: In function `lcdPrintNum':
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug/../src/lcd.s:256: undefined reference to `writeData'
+collect2.exe: error: ld returned 1 exit status
+make: *** [lab4lcd.elf] Error 1
+makefile:34: recipe for target 'lab4lcd.elf' failed
+21:33:40 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1628	   1080	   1092	   3800	    ed8	lab4lcd.elf
+ 
+21:33:49 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+21:39:48 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+../src/lcd.s:262: Error: constant expression required -- `ubfx r1,r0,#'
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+21:40:36 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1644	   1080	   1092	   3816	    ee8	lab4lcd.elf
+ 
+21:42:25 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1648	   1080	   1092	   3820	    eec	lab4lcd.elf
+ 
+21:52:58 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+../src/lcd.s:262: Error: invalid pseudo operation -- `str r1,=numToPrint'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+21:53:13 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+../src/lcd.s:262: Error: cannot use register index with PC-relative addressing -- `str r1,numToPrint'
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+21:53:52 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+../src/lcd.s:263: Error: cannot use register index with PC-relative addressing -- `str r1,r2'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+21:54:35 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1648	   1088	   1092	   3828	    ef4	lab4lcd.elf
+ 
+21:54:42 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+21:55:15 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+21:57:40 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+21:58:56 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+21:59:16 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+21:59:39 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1648	   1088	   1092	   3828	    ef4	lab4lcd.elf
+ 
+22:00:00 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:02:10 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+../src/lcd.s:263: Error: cannot use register index with PC-relative addressing -- `str r1,r2'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+22:02:30 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1648	   1088	   1092	   3828	    ef4	lab4lcd.elf
+ 
+22:05:42 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s:364: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1648	   1088	   1092	   3828	    ef4	lab4lcd.elf
+ 
+22:06:52 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1648	   1088	   1092	   3828	    ef4	lab4lcd.elf
+ 
+22:08:39 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1648	   1088	   1092	   3828	    ef4	lab4lcd.elf
+ 
+22:09:26 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1648	   1088	   1092	   3828	    ef4	lab4lcd.elf
+ 
+22:12:41 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:13:49 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:13:55 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:14:03 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:14:24 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:14:34 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:14:41 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:14:46 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:15:10 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:15:35 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:16:12 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:21:19 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1652	   1088	   1092	   3832	    ef8	lab4lcd.elf
+ 
+22:23:44 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1652	   1088	   1092	   3832	    ef8	lab4lcd.elf
+ 
+10:48:15 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1652	   1088	   1092	   3832	    ef8	lab4lcd.elf
+ 
+10:48:40 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+10:48:49 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:08:30 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:12:27 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1648	   1088	   1092	   3828	    ef4	lab4lcd.elf
+ 
+22:17:04 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:21:47 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1648	   1088	   1092	   3828	    ef4	lab4lcd.elf
+ 
+22:43:52 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1652	   1088	   1092	   3832	    ef8	lab4lcd.elf
+ 
+22:45:35 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1652	   1088	   1092	   3832	    ef8	lab4lcd.elf
+ 
+22:49:57 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/delay.s
+ 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1652	   1088	   1092	   3832	    ef8	lab4lcd.elf
+ 
+22:50:03 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+22:51:31 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+23:07:56 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+../src/lcd.s:269: Error: missing expression -- `ldr r1,'
+make: *** [src/lcd.o] Error 1
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+23:08:08 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+../src/lcd.s:269: Error: missing expression -- `ldr r1,'
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+23:09:17 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1656	   1088	   1092	   3836	    efc	lab4lcd.elf
+ 
+23:10:02 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+23:10:32 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+23:13:15 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+23:14:04 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+23:15:41 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+23:22:24 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1668	   1088	   1092	   3848	    f08	lab4lcd.elf
+ 
+23:27:10 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1668	   1088	   1092	   3848	    f08	lab4lcd.elf
+ 
+23:27:40 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1668	   1088	   1092	   3848	    f08	lab4lcd.elf
+ 
+23:27:55 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+23:30:56 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+23:33:48 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1668	   1088	   1092	   3848	    f08	lab4lcd.elf
+ 
+23:36:49 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1672	   1088	   1092	   3852	    f0c	lab4lcd.elf
+ 
+23:37:15 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+23:47:23 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1672	   1088	   1092	   3852	    f0c	lab4lcd.elf
+ 
+23:50:56 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1672	   1088	   1092	   3852	    f0c	lab4lcd.elf
+ 
+00:22:56 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s:77: Error: immediate expression requires a # prefix -- `mov r3,RS_CLR'
+../src/delay.s:79: Error: immediate expression requires a # prefix -- `mov r3,RW_SET'
+../src/delay.s:81: Error: immediate expression requires a # prefix -- `mov r3,E_SET'
+../src/delay.s:85: Error: immediate expression requires a # prefix -- `mov r3,E_SET'
+../src/delay.s:92: Error: immediate expression requires a # prefix -- `mov r3,E_CLR'
+../src/delay.s:96: Error: unshifted register required -- `and r1,r1,#0x0001'
+src/subdir.mk:19: recipe for target 'src/delay.o' failed
+make: *** [src/delay.o] Error 1
+00:24:03 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s:96: Error: unshifted register required -- `and r1,r1,#0x0001'
+make: *** [src/delay.o] Error 1
+src/subdir.mk:19: recipe for target 'src/delay.o' failed
+00:24:50 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s:95: Error: unshifted register required -- `and r1,r1,#0x0010'
+src/subdir.mk:19: recipe for target 'src/delay.o' failed
+make: *** [src/delay.o] Error 1
+00:24:59 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s:95: Error: unshifted register required -- `and r1,r1,#0x0010'
+src/subdir.mk:19: recipe for target 'src/delay.o' failed
+make: *** [src/delay.o] Error 1
+00:27:50 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s:62: Error: cannot represent THUMB_OFFSET relocation in this object file format
+../src/delay.s:72: Error: cannot represent THUMB_OFFSET relocation in this object file format
+../src/delay.s:77: Error: cannot represent THUMB_IMM relocation in this object file format
+../src/delay.s:78: Error: cannot represent THUMB_OFFSET relocation in this object file format
+../src/delay.s:79: Error: cannot represent THUMB_IMM relocation in this object file format
+../src/delay.s:80: Error: cannot represent THUMB_OFFSET relocation in this object file format
+../src/delay.s:81: Error: cannot represent THUMB_IMM relocation in this object file format
+../src/delay.s:82: Error: cannot represent THUMB_OFFSET relocation in this object file format
+../src/delay.s:85: Error: cannot represent THUMB_IMM relocation in this object file format
+../src/delay.s:86: Error: cannot represent THUMB_OFFSET relocation in this object file format
+../src/delay.s:89: Error: cannot represent THUMB_OFFSET relocation in this object file format
+../src/delay.s:92: Error: cannot represent THUMB_IMM relocation in this object file format
+../src/delay.s:93: Error: cannot represent THUMB_OFFSET relocation in this object file format
+../src/delay.s:104: Error: cannot represent THUMB_OFFSET relocation in this object file format
+../src/delay.s:115: Error: cannot represent THUMB_OFFSET relocation in this object file format
+src/subdir.mk:19: recipe for target 'src/delay.o' failed
+make: *** [src/delay.o] Error 1
+00:28:58 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+../src/delay.s: Assembler messages:
+../src/delay.s:81: Error: undefined symbol RS_CLR used as an immediate value
+../src/delay.s:83: Error: undefined symbol RW_SET used as an immediate value
+../src/delay.s:85: Error: undefined symbol E_SET used as an immediate value
+../src/delay.s:89: Error: undefined symbol E_SET used as an immediate value
+../src/delay.s:96: Error: undefined symbol E_CLR used as an immediate value
+src/subdir.mk:19: recipe for target 'src/delay.o' failed
+make: *** [src/delay.o] Error 1
+00:30:07 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/delay.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/delay.o" "../src/delay.s"
+Finished building: ../src/delay.s
+ 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+../src/lcd.s:424: Error: symbol `lcdBusyWait' is already defined
+../src/lcd.s:450: Error: symbol `busy' is already defined
+src/subdir.mk:19: recipe for target 'src/lcd.o' failed
+make: *** [src/lcd.o] Error 1
+00:30:58 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1808	   1088	   1092	   3988	    f94	lab4lcd.elf
+ 
+00:31:15 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+00:34:42 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1824	   1088	   1092	   4004	    fa4	lab4lcd.elf
+ 
+00:36:14 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1812	   1088	   1092	   3992	    f98	lab4lcd.elf
+ 
+00:36:24 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+00:36:35 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+00:36:59 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+00:37:13 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+00:38:54 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1824	   1088	   1092	   4004	    fa4	lab4lcd.elf
+ 
+00:41:36 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1836	   1088	   1092	   4016	    fb0	lab4lcd.elf
+ 
+00:41:58 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1824	   1088	   1092	   4004	    fa4	lab4lcd.elf
+ 
+00:42:40 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1820	   1088	   1092	   4000	    fa0	lab4lcd.elf
+ 
+00:43:34 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+00:44:11 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+00:45:19 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1820	   1088	   1092	   4000	    fa0	lab4lcd.elf
+ 
+00:45:38 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1832	   1088	   1092	   4012	    fac	lab4lcd.elf
+ 
+00:45:45 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+00:46:13 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1844	   1088	   1092	   4024	    fb8	lab4lcd.elf
+ 
+00:46:38 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1844	   1088	   1092	   4024	    fb8	lab4lcd.elf
+ 
+00:47:51 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1812	   1088	   1092	   3992	    f98	lab4lcd.elf
+ 
+00:48:35 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1812	   1088	   1092	   3992	    f98	lab4lcd.elf
+ 
+00:48:54 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1812	   1088	   1092	   3992	    f98	lab4lcd.elf
+ 
+00:52:57 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+00:53:08 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+00:55:31 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+00:56:23 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+00:57:20 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+00:57:43 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+00:58:02 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+00:58:09 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+00:58:33 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+00:58:54 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+00:59:32 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+00:59:53 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+01:00:59 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1816	   1088	   1092	   3996	    f9c	lab4lcd.elf
+ 
+01:02:04 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1824	   1088	   1092	   4004	    fa4	lab4lcd.elf
+ 
+01:03:36 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1844	   1088	   1092	   4024	    fb8	lab4lcd.elf
+ 
+01:05:45 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1848	   1088	   1092	   4028	    fbc	lab4lcd.elf
+ 
+01:13:24 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1876	   1088	   1092	   4056	    fd8	lab4lcd.elf
+ 
+01:14:22 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1880	   1088	   1092	   4060	    fdc	lab4lcd.elf
+ 
+01:14:38 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+01:16:53 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1872	   1088	   1092	   4052	    fd4	lab4lcd.elf
+ 
+01:20:35 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+make: Nothing to be done for 'all'.
+01:22:22 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1872	   1088	   1092	   4052	    fd4	lab4lcd.elf
+ 
+01:23:36 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1876	   1088	   1092	   4056	    fd8	lab4lcd.elf
+ 
+01:25:40 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1876	   1088	   1092	   4056	    fd8	lab4lcd.elf
+ 
+01:26:11 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1872	   1088	   1092	   4052	    fd4	lab4lcd.elf
+ 
+01:27:29 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/lcd.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/lcd.o" "../src/lcd.s"
+../src/lcd.s: Assembler messages:
+../src/lcd.s: Warning: end of file not at end of a line; newline inserted
+Finished building: ../src/lcd.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1872	   1088	   1092	   4052	    fd4	lab4lcd.elf
+ 
+01:30:54 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1880	   1088	   1092	   4060	    fdc	lab4lcd.elf
+ 
+01:31:27 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1880	   1088	   1092	   4060	    fdc	lab4lcd.elf
+ 
+01:32:15 **** Incremental Build of configuration Debug for project lab4lcd ****
+make all 
+Building file: ../src/main.s
+Invoking: MCU GCC Assembler
+C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "src/main.o" "../src/main.s"
+Finished building: ../src/main.s
+ 
+Building target: lab4lcd.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab4lcd\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "lab4lcd.elf" @"objects.list"   -lm
+Finished building target: lab4lcd.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "lab4lcd.elf" "lab4lcd.bin"
+arm-none-eabi-size "lab4lcd.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1880	   1088	   1092	   4060	    fdc	lab4lcd.elf
+ 
