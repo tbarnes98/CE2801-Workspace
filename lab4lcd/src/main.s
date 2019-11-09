@@ -16,14 +16,20 @@
 main:
     bl lcdInit
 
-    mov r0, #10
-    bl countDown
+mainLoop:
 
     bl lcdClear
+    mov r0, #5
+    bl countDown
 
     ldr r0, =msg
     bl lcdPrintString
     
+
+    mov r0, #5
+    bl countDown
+    b mainLoop
+
 end:
     b end
 

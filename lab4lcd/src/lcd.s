@@ -1,7 +1,7 @@
 # lcd.s
 # Trevor Barnes
 # CE2801-031
-# Description: 
+# Description: Contains routines for the LCD component
 
 .syntax unified
 .cpu cortex-m4
@@ -249,6 +249,11 @@ lcdPrintString:
     mov r2, #0
 loop:
     ldrb r1, [r0, r2]
+    @ push {r0, r1}
+    @ mov r0, #2
+    @ mov r1, r2
+    @ bl lcdSetPosition
+    @ pop {r0, r1}
     cmp r1, #0x00
     beq done
     bl WriteData
@@ -272,7 +277,7 @@ lcdPrintNum:
     # Move cursor to right-most position
     mov r1, #16
 writeByte:
-    mov r0, #1
+    mov r0, #2
     bl lcdSetPosition
     
     mov r4, r0
@@ -307,8 +312,9 @@ num_to_ASCII:
 
     cmp r0,#0
     blt out_of_range
-    # cmp r0,#9999
-    # bgt out_of_range
+    ldr r1,=9999
+    cmp r0, r1
+    bgt out_of_range
 
 # Normal conversion behavior
     mov r1, #16
