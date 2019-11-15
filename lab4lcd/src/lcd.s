@@ -15,7 +15,7 @@
     .equ RCC_GPIOCEN, 1<<2
 
     .equ GPIOA_BASE, 0x40020000
-    .equ GPIOC_BASE, 0x40020800 
+    .equ GPIOC_BASE, 0x40020800
     .equ GPIO_MODER, 0x00
     .equ GPIO_ODR, 0x14
     .equ GPIO_IDR, 0x10
@@ -57,7 +57,7 @@ PortSetup:
 
     movw r3, 0x5500
     movt r3, 0x0055
-    
+
     orr r2,r2, r3
 
     movw r3, 0xAA00
@@ -72,7 +72,7 @@ PortSetup:
 
     movw r3, 0x0000
     movt r3, 0x0015
-    
+
     orr r2,r2, r3
 
     movw r3, 0x0000
@@ -105,13 +105,13 @@ WriteInstruction:
     mov r3, E_SET
     str r3, [r2, #GPIO_BSRR]
 
-	#Set R1 -> DataBus 
+	#Set R1 -> DataBus
     lsl r1, #4
     ldr r3, =GPIOA_BASE
     ldr r2, [r3, #GPIO_ODR]
     bfc r2, #4, #8
     orr r2, r2, r1
-    str r2, [r3, #GPIO_ODR ] 
+    str r2, [r3, #GPIO_ODR ]
 	#Set E=0
     ldr r2, =GPIOC_BASE
     mov r3, E_CLR
@@ -141,13 +141,13 @@ WriteData:
 	#Set E=1
     mov r3, #E_SET
     str r3, [r2, #GPIO_BSRR]
-	#Set R1 -> DataBus 
+	#Set R1 -> DataBus
 	lsl r1, #4
     ldr r3, =GPIOA_BASE
     ldr r2, [r3, #GPIO_ODR]
     bfc r2, #4, #8
     orr r2, r2, r1
-    str r2, [r3, #GPIO_ODR ] 
+    str r2, [r3, #GPIO_ODR ]
 	#Set E=0
     ldr r2, =GPIOC_BASE
     mov r3, #E_CLR
@@ -186,7 +186,7 @@ lcdInit:
     bl WriteInstruction
     mov r1, #2
     bl delay_ms
-    
+
     #Write Entry Mode Set (0x06)
     mov r1, 0x06
     bl WriteInstruction
@@ -279,7 +279,7 @@ lcdPrintNum:
 writeByte:
     mov r0, #2
     bl lcdSetPosition
-    
+
     mov r4, r0
     mov r0, #1
     bl delay_ms
@@ -355,7 +355,7 @@ shift_cycle:
     bfi r0, r2, #28, #4
 end_verify_nibbles:
 
-    
+
     b shift_cycle
 encode:
     mov r3, #3
@@ -410,7 +410,7 @@ lcdBusyWait:
     ldr r2, [r1, #GPIO_MODER]
 
     mov r3, #0
-    
+
     orr r2, r2, r3
 
     movw r3, 0xFF00
@@ -447,13 +447,13 @@ busy:
     cmp r1, #1
     beq busy
 
-# Return DB port to original mode 
+# Return DB port to original mode
     ldr r1, =GPIOA_BASE
     ldr r2, [r1, #GPIO_MODER]
 
     movw r3, 0x5500
     movt r3, 0x0055
-    
+
     orr r2,r2, r3
 
     movw r3, 0xAA00

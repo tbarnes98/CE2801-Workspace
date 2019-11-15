@@ -24,7 +24,7 @@ mainLoop:
 
     ldr r0, =msg
     bl lcdPrintString
-    
+
 
     mov r0, #5
     bl countDown
@@ -60,4 +60,3 @@ done:
 .section .rodata
 msg:
     .asciz "Hello World!"
-

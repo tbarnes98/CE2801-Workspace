@@ -10,7 +10,7 @@
 
 .global delay_ms
 # A subroutine to create a delay of a certain number of milliseconds
-# Input: 
+# Input:
 #       r0: Length of delay (ms)
 delay_ms:
 
@@ -55,5 +55,4 @@ lcd_delay:
 
 	# return
 	pop {pc}
-
 
