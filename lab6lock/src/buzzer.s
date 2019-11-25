@@ -2,10 +2,10 @@
 # Trevor Barnes
 # CE2801-031
 
-	.syntax unified
-    .cpu cortex-m4
-    .thumb
-    .section .text
+.syntax unified
+.cpu cortex-m4
+.thumb
+.section .text
 
     .equ RCC_BASE, 0x40023800
     .equ RCC_AHB1ENR, 0x30
@@ -19,7 +19,6 @@
     .equ PB4_ALT_FUNCTION, 1<<9
     .equ AFRL_OFFSET, 0x20
     .equ AFRL_TIM_3_CH_1_EN, 1<<17
-
 
     .equ CCMR_OFFSET, 0x18
     .equ CCMR_OCC1PE, 1<<3
@@ -41,8 +40,7 @@
 
     .equ mil, 1000000
 
-	# Configures the piezo buzzer timer in pwm mode
-    .global piezoInit
+.global piezoInit
 piezoInit:
     push {r0-r2}
 
@@ -55,20 +53,20 @@ piezoInit:
     orr r1, r1, #TIM3_EN
     str r1, [r0, #APB1ENR_OFFSET]
 
-	#Set Mode to alternate function
+	# Set Mode to alternate function
     ldr r0, =GPIOB_BASE
     ldr r1,[r0, #GPIO_MODER]
     bic r1, r1, #1<<8
     orr r1, r1, #PB4_ALT_FUNCTION
     str r1, [r0, #GPIO_MODER]
 
-    #Set Alternate function low register to timer 3.
+    # Set Alternate function low register to timer 3.
     ldr r1, [r0, #AFRL_OFFSET]
     bic r1, #16, #4
     orr r1, r1, #AFRL_TIM_3_CH_1_EN
     str r1, [r0, #AFRL_OFFSET]
 
-    #Configure CCMR1 to enable preload and set to pwm
+    # Configure CCMR1 to enable preload and set to pwm
     ldr r0, =TIM3_BASE
     ldr r1, [r0, #CCMR_OFFSET]
     bfc r1, #4, #3
@@ -77,13 +75,13 @@ piezoInit:
     orr r1, r1, r2
     str r1, [r0, #CCMR_OFFSET]
 
-	#Configure CCER to enable timer 3 as output capture
+	#C onfigure CCER to enable timer 3 as output capture
     ldr r1, [r0, #CCER_OFFSET]
     mov r2, #CCER_CC1E
     orr r1, r1, r2
     str r1, [r0, #CCER_OFFSET]
 
-	#Configure control register to enable preload
+	# Configure control register to enable preload
     ldr r1, [r0, #CR1_OFFSET]
     mov r2, #CR_ARPE_EN
     orr r1, r1, r2
@@ -116,13 +114,11 @@ piezoOff:
     pop {r0-r2}
     bx lr
 
-    # Set's a given frequency to the piezo buzzer
-    #r0 contains frequency in hz
+    # r0 contains frequency (hz)
     .global piezoSetFrequency
 piezoSetFrequency:
     push {r0-r3}
     ldr r3, =TIM3_BASE
-    #bring clock rate down to 1mhz or 1,000,000 hz
     mov r1, #15
     str r1, [r3, #PSC_OFFSET]
     ldr r1, =mil

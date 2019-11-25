@@ -2679,3 +2679,595 @@ Finished building: default.size.stdout
 Finished building: lab6lock.list
  
  
+12:21:07 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+ 
+12:21:09 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Startup/startup_stm32f446retx.o: In function `LoopFillZerobss':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Startup/startup_stm32f446retx.s:83: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:39: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:21:11 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:4: Error: missing name
+make: *** [Src/subdir.mk:17: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/timer.s: Assembler messages:
+../Src/timer.s:4: Error: missing name
+../Src/timer.s:30: Error: bad instruction `pop{r0, r4}'
+../Src/timer.s:13: Error: undefined symbol AFRL_TIM3_CH1_EN used as an immediate value
+../Src/timer.s:21: Error: undefined symbol CCMR_OCC1M_PWM used as an immediate value
+../Src/timer.s:22: Error: undefined symbol CCMR_OCC1PE used as an immediate value
+make: *** [Src/subdir.mk:17: Src/timer.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:21:54 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+ 
+12:21:56 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Startup/startup_stm32f446retx.o: In function `LoopFillZerobss':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Startup/startup_stm32f446retx.s:83: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:39: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:21:58 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+../Src/timer.s: Assembler messages:
+../Src/timer.s:4: Error: missing name
+../Src/timer.s:30: Error: bad instruction `pop{r0, r4}'
+../Src/timer.s:13: Error: undefined symbol AFRL_TIM3_CH1_EN used as an immediate value
+../Src/timer.s:21: Error: undefined symbol CCMR_OCC1M_PWM used as an immediate value
+../Src/timer.s:22: Error: undefined symbol CCMR_OCC1PE used as an immediate value
+make: *** [Src/subdir.mk:17: Src/timer.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:22:39 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+ 
+12:22:41 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Startup/startup_stm32f446retx.o: In function `LoopFillZerobss':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Startup/startup_stm32f446retx.s:83: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:22:44 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+../Src/timer.s: Assembler messages:
+../Src/timer.s:32: Error: bad instruction `pop{r0, r4}'
+../Src/timer.s:15: Error: undefined symbol AFRL_TIM3_CH1_EN used as an immediate value
+../Src/timer.s:23: Error: undefined symbol CCMR_OCC1M_PWM used as an immediate value
+../Src/timer.s:24: Error: undefined symbol CCMR_OCC1PE used as an immediate value
+make: *** [Src/subdir.mk:17: Src/timer.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:11:24 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:15: Error: bad expression
+../Src/main.s:15: Error: junk at end of line, first unrecognized character is `2'
+../Src/main.s:16: Error: bad expression
+../Src/main.s:16: Error: junk at end of line, first unrecognized character is `1'
+../Src/main.s:17: Error: bad expression
+../Src/main.s:17: Error: junk at end of line, first unrecognized character is `1'
+../Src/main.s:18: Error: bad expression
+../Src/main.s:18: Error: junk at end of line, first unrecognized character is `1'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:12:48 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:15: Error: bad expression
+../Src/main.s:15: Error: junk at end of line, first unrecognized character is `2'
+../Src/main.s:16: Error: bad expression
+../Src/main.s:16: Error: junk at end of line, first unrecognized character is `1'
+../Src/main.s:17: Error: bad expression
+../Src/main.s:17: Error: junk at end of line, first unrecognized character is `1'
+../Src/main.s:18: Error: bad expression
+../Src/main.s:18: Error: junk at end of line, first unrecognized character is `1'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:13:15 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:15: Error: bad expression
+../Src/main.s:15: Error: junk at end of line, first unrecognized character is `2'
+../Src/main.s:16: Error: bad expression
+../Src/main.s:16: Error: junk at end of line, first unrecognized character is `1'
+../Src/main.s:17: Error: bad expression
+../Src/main.s:17: Error: junk at end of line, first unrecognized character is `1'
+../Src/main.s:18: Error: bad expression
+../Src/main.s:18: Error: junk at end of line, first unrecognized character is `1'
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:13:56 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:15: Error: bad expression
+../Src/main.s:15: Error: junk at end of line, first unrecognized character is `2'
+../Src/main.s:16: Error: bad expression
+../Src/main.s:16: Error: junk at end of line, first unrecognized character is `1'
+../Src/main.s:17: Error: bad expression
+../Src/main.s:17: Error: junk at end of line, first unrecognized character is `1'
+../Src/main.s:18: Error: bad expression
+../Src/main.s:18: Error: junk at end of line, first unrecognized character is `1'
+../Src/main.s:44: Error: undefined symbol cOne used as an immediate value
+../Src/main.s:53: Error: undefined symbol cTwo used as an immediate value
+../Src/main.s:62: Error: undefined symbol cThree used as an immediate value
+../Src/main.s:71: Error: undefined symbol cFour used as an immediate value
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:14:26 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:44: Error: undefined symbol cOne used as an immediate value
+../Src/main.s:53: Error: undefined symbol cTwo used as an immediate value
+../Src/main.s:62: Error: undefined symbol cThree used as an immediate value
+../Src/main.s:71: Error: undefined symbol cFour used as an immediate value
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:14:53 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -o "lab6lock.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab6lock\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab6lock.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab6lock.elf
+ 
+arm-none-eabi-objdump -h -S  lab6lock.elf  > "lab6lock.list"
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+Finished building: lab6lock.list
+ 
+ 
+15:00:24 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/keypad.o" "../Src/keypad.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `main':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:14: undefined reference to `lcdInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:15: undefined reference to `keyInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:16: undefined reference to `timerInit'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:00:28 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/bad.o" "../Src/bad.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:61: Error: backward ref to unknown label "1:"
+C:\Users\barnestr\AppData\Local\Temp\cc6quWwB.s: Error: unaligned opcodes detected in executable segment
+make: *** [Src/subdir.mk:19: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/timer.s: Assembler messages:
+../Src/timer.s:32: Error: bad instruction `pop{r0, r4}'
+../Src/timer.s:15: Error: undefined symbol AFRL_TIM3_CH1_EN used as an immediate value
+../Src/timer.s:23: Error: undefined symbol CCMR_OCC1M_PWM used as an immediate value
+../Src/timer.s:24: Error: undefined symbol CCMR_OCC1PE used as an immediate value
+make: *** [Src/subdir.mk:19: Src/timer.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:14:30 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `main':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:14: undefined reference to `lcdInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:15: undefined reference to `keyInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:16: undefined reference to `timerInit'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:14:33 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:61: Error: backward ref to unknown label "1:"
+C:\Users\barnestr\AppData\Local\Temp\cc3Yifzy.s: Error: unaligned opcodes detected in executable segment
+make: *** [Src/subdir.mk:19: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/timer.s: Assembler messages:
+../Src/timer.s:11: Error: expected symbol name
+../Src/timer.s:18: Error: undefined symbol AFRL_TIM3_CH1_EN used as an immediate value
+make: *** [Src/subdir.mk:19: Src/timer.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:17:31 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `main':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:14: undefined reference to `lcdInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:15: undefined reference to `keyInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:16: undefined reference to `timerInit'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:17:34 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:61: Error: backward ref to unknown label "1:"
+C:\Users\barnestr\AppData\Local\Temp\ccGa4zYw.s: Error: unaligned opcodes detected in executable segment
+make: *** [Src/subdir.mk:19: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/timer.s: Assembler messages:
+../Src/timer.s:17: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../Src/timer.s:20: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../Src/timer.s:25: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../Src/timer.s:30: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+make: *** [Src/subdir.mk:19: Src/timer.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:18:14 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `main':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:14: undefined reference to `lcdInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:15: undefined reference to `keyInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:16: undefined reference to `timerInit'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:18:16 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:61: Error: backward ref to unknown label "1:"
+C:\Users\barnestr\AppData\Local\Temp\cceD8Zcr.s: Error: unaligned opcodes detected in executable segment
+make: *** [Src/subdir.mk:19: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/timer.s: Assembler messages:
+../Src/timer.s:12: Error: unknown pseudo-op: `.eqe'
+make: *** [Src/subdir.mk:19: Src/timer.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:18:33 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `main':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:14: undefined reference to `lcdInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:15: undefined reference to `keyInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:16: undefined reference to `timerInit'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:18:35 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:61: Error: backward ref to unknown label "1:"
+C:\Users\barnestr\AppData\Local\Temp\ccU1pF6U.s: Error: unaligned opcodes detected in executable segment
+make: *** [Src/subdir.mk:19: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/timer.s: Assembler messages:
+../Src/timer.s:26: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../Src/timer.s:31: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+make: *** [Src/subdir.mk:19: Src/timer.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:23:13 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `main':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:14: undefined reference to `lcdInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:15: undefined reference to `keyInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:16: undefined reference to `timerInit'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:23:15 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:61: Error: backward ref to unknown label "1:"
+C:\Users\barnestr\AppData\Local\Temp\ccFJTWYk.s: Error: unaligned opcodes detected in executable segment
+make: *** [Src/subdir.mk:19: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:23:47 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/main.o: In function `main':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:14: undefined reference to `lcdInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:15: undefined reference to `keyInit'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/main.s:16: undefined reference to `timerInit'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:23:49 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+C:\Users\barnestr\AppData\Local\Temp\cc2GqGKM.s: Assembler messages:
+C:\Users\barnestr\AppData\Local\Temp\cc2GqGKM.s: Error: unaligned opcodes detected in executable segment
+make: *** [Src/subdir.mk:19: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:27:07 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+ 
+15:27:09 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/lcd.o" "../Src/lcd.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/keypad.o: In function `KeyGetKey':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/keypad.s:170: undefined reference to `usDelay'
+Src/keypad.o: In function `keypadScan':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/keypad.s:238: undefined reference to `usDelay'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/keypad.s:262: undefined reference to `usDelay'
+Src/lcd.o: In function `WriteInstruction':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:122: undefined reference to `usDelay'
+Src/lcd.o: In function `WriteData':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:157: undefined reference to `usDelay'
+Src/lcd.o: In function `lcdInit':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:168: undefined reference to `msDelay'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:173: undefined reference to `usDelay'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:178: undefined reference to `usDelay'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:183: undefined reference to `usDelay'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:188: undefined reference to `msDelay'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:195: undefined reference to `usDelay'
+Src/lcd.o: In function `lcdClear':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:208: undefined reference to `msDelay'
+Src/lcd.o: In function `lcdHome':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:221: undefined reference to `msDelay'
+Src/lcd.o: In function `writeByte':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:280: undefined reference to `msDelay'
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/lcd.s:289: undefined reference to `msDelay'
+Src/timer.o: In function `timerInit':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/timer.s:26: undefined reference to `TIM3_BASE'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:27:13 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/keypad.o" "../Src/keypad.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/lcd.o" "../Src/lcd.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+C:\Users\barnestr\AppData\Local\Temp\ccNWvgbU.s: Assembler messages:
+C:\Users\barnestr\AppData\Local\Temp\ccNWvgbU.s: Error: unaligned opcodes detected in executable segment
+make: *** [Src/subdir.mk:23: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:27:49 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+ 
+15:27:51 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/delay.o" "../Src/delay.s"
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/timer.o: In function `timerInit':
+C:/Users/barnestr/Documents/CE2801/workspace/lab7interrupts/Debug/../Src/timer.s:26: undefined reference to `TIM3_BASE'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab7interrupts.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:27:54 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/delay.o" "../Src/delay.s"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+C:\Users\barnestr\AppData\Local\Temp\ccAvND8E.s: Assembler messages:
+C:\Users\barnestr\AppData\Local\Temp\ccAvND8E.s: Error: unaligned opcodes detected in executable segment
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:29:15 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab7interrupts.elf
+ 
+arm-none-eabi-size   lab7interrupts.elf 
+arm-none-eabi-objdump -h -S  lab7interrupts.elf  > "lab7interrupts.list"
+   text	   data	    bss	    dec	    hex	filename
+   1956	     12	   1564	   3532	    dcc	lab7interrupts.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab7interrupts.list
+ 
+15:30:49 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-size   lab7interrupts.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1956	     12	   1564	   3532	    dcc	lab7interrupts.elf
+Finished building: default.size.stdout
+ 
+15:31:00 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-size   lab7interrupts.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1956	     12	   1564	   3532	    dcc	lab7interrupts.elf
+Finished building: default.size.stdout
+ 
+15:44:33 **** Incremental Build of configuration Debug for project lab5keypad ****
+make -j8 all 
+arm-none-eabi-size   lab5keypad.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1980	     16	   1568	   3564	    dec	lab5keypad.elf
+Finished building: default.size.stdout
+ 
+15:44:47 **** Incremental Build of configuration Debug for project lab5keypad ****
+make -j8 all 
+arm-none-eabi-size   lab5keypad.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1980	     16	   1568	   3564	    dec	lab5keypad.elf
+Finished building: default.size.stdout
+ 
+15:45:07 **** Incremental Build of configuration Debug for project lab5keypad ****
+make -j8 all 
+arm-none-eabi-size   lab5keypad.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1980	     16	   1568	   3564	    dec	lab5keypad.elf
+Finished building: default.size.stdout
+ 
+15:45:21 **** Incremental Build of configuration Debug for project lab5keypad ****
+make -j8 all 
+arm-none-eabi-size   lab5keypad.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1980	     16	   1568	   3564	    dec	lab5keypad.elf
+Finished building: default.size.stdout
+ 
+15:50:25 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+ 
+16:11:42 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+ 
+16:11:45 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -o "lab7interrupts.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab7interrupts\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab7interrupts.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab7interrupts.elf
+ 
+arm-none-eabi-objdump -h -S  lab7interrupts.elf  > "lab7interrupts.list"
+arm-none-eabi-size   lab7interrupts.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1956	     12	   1564	   3532	    dcc	lab7interrupts.elf
+Finished building: default.size.stdout
+Finished building: lab7interrupts.list
+ 
+ 
+16:11:49 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:110: Error: PC not allowed in register list -- `push {r0,r1,pc}'
+make: *** [Src/subdir.mk:23: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:12:19 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+ 
+16:12:21 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-size   lab7interrupts.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1956	     12	   1564	   3532	    dcc	lab7interrupts.elf
+Finished building: default.size.stdout
+ 
+16:12:22 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+../Src/main.s: Assembler messages:
+../Src/main.s:39: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+../Src/main.s:41: Error: cannot represent T32_OFFSET_IMM relocation in this object file format
+make: *** [Src/subdir.mk:23: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:12:52 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+ 
+16:12:54 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-size   lab7interrupts.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1956	     12	   1564	   3532	    dcc	lab7interrupts.elf
+Finished building: default.size.stdout
+ 
+16:12:55 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -o "lab8adc.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab8adc\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab8adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Startup/startup_stm32f446retx.o: In function `LoopFillZerobss':
+C:/Users/barnestr/Documents/CE2801/workspace/lab8adc/Debug/../Startup/startup_stm32f446retx.s:83: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab8adc.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:14:04 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+ 
+16:14:05 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-size   lab7interrupts.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1956	     12	   1564	   3532	    dcc	lab7interrupts.elf
+Finished building: default.size.stdout
+ 
+16:14:07 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o" "../Src/main.s"
+arm-none-eabi-gcc -o "lab8adc.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab8adc\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab8adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Src/timer.o: In function `timerInit':
+C:/Users/barnestr/Documents/CE2801/workspace/lab8adc/Debug/../Src/timer.s:26: undefined reference to `TIM3_BASE'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:40: lab8adc.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:14:49 **** Incremental Build of configuration Debug for project lab6lock ****
+make -j8 all 
+arm-none-eabi-size   lab6lock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2524	     44	   1564	   4132	   1024	lab6lock.elf
+Finished building: default.size.stdout
+ 
+16:14:51 **** Incremental Build of configuration Debug for project lab7interrupts ****
+make -j8 all 
+arm-none-eabi-size   lab7interrupts.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1956	     12	   1564	   3532	    dcc	lab7interrupts.elf
+Finished building: default.size.stdout
+ 
+16:14:53 **** Incremental Build of configuration Debug for project lab8adc ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/timer.o" "../Src/timer.s"
+arm-none-eabi-gcc -o "lab8adc.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\barnestr\Documents\CE2801\workspace\lab8adc\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab8adc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab8adc.elf
+ 
+arm-none-eabi-size   lab8adc.elf 
+arm-none-eabi-objdump -h -S  lab8adc.elf  > "lab8adc.list"
+   text	   data	    bss	    dec	    hex	filename
+   2140	     12	   1564	   3716	    e84	lab8adc.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab8adc.list
+ 

@@ -4,10 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 S_SRCS += \
+../Src/delay.s \
+../Src/keypad.s \
+../Src/lcd.s \
 ../Src/main.s \
 ../Src/timer.s 
 
 OBJS += \
+./Src/delay.o \
+./Src/keypad.o \
+./Src/lcd.o \
 ./Src/main.o \
 ./Src/timer.o 
 

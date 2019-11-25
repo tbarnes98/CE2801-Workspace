@@ -1,4 +1,4 @@
-# timer.s
+# main.s
 # Trevor Barnes
 # CE2801-031
 .syntax unified
@@ -22,7 +22,8 @@ timerInit:
     orr r1, r1, #AFRL_TIM3_CH1_EN
     str r1, [r0, #AFRL_OFFSET]
 
-
+    #Enable CCMR1 for preload and set pwm
+    #Allows for the modification of the pulse
     ldr r0, =TIM3_BASE
     ldr r1, [r0, #CCMR_OFFSET]
     bfc r1, #4, #3
@@ -31,8 +32,9 @@ timerInit:
     orr r1, r1, r2
     str r1, [r0, #CCMR_OFFSET]
 
+	#Enable CCER to for TIM3 (TIC)
+	#Every 10 seconds, sample
 
 
-
-
+	pop {r0, r4}
 	bx lr

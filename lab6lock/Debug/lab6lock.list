@@ -27,11 +27,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  00020024  2**0
                   CONTENTS, READONLY
- 12 .debug_line   00000477  00000000  00000000  00020054  2**0
+ 12 .debug_line   00000475  00000000  00000000  00020054  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_info   00000106  00000000  00000000  000204cb  2**0
+ 13 .debug_info   00000106  00000000  00000000  000204c9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_abbrev 0000008a  00000000  00000000  000205d1  2**0
+ 14 .debug_abbrev 0000008a  00000000  00000000  000205cf  2**0
                   CONTENTS, READONLY, DEBUGGING
  15 .debug_aranges 000000e8  00000000  00000000  00020660  2**3
                   CONTENTS, READONLY, DEBUGGING
@@ -1517,9 +1517,9 @@ main:
 	bl piezoInit
  80007e8:	f7ff fd0c 	bl	8000204 <piezoInit>
 
-080007ec <top>:
+080007ec <mainLoop>:
 
-top:
+mainLoop:
 	mov r0, #200
  80007ec:	f04f 00c8 	mov.w	r0, #200	; 0xc8
 	bl msDelay
@@ -1538,18 +1538,20 @@ top:
 
 08000802 <firstchar>:
 
+# Coded as '2' button
 firstchar:
 	bl KeyGetKey
  8000802:	f7ff fdda 	bl	80003ba <KeyGetKey>
 	add r8, r8, #1
  8000806:	f108 0801 	add.w	r8, r8, #1
-	cmp r0, #2 //2
+	cmp r0, #char1
  800080a:	2802      	cmp	r0, #2
 	beq correctchar
  800080c:	d01b      	beq.n	8000846 <correctchar>
 
 0800080e <secondchar>:
 
+# Coded as '8' button
 secondchar:
 	ldr r0, =star
  800080e:	483d      	ldr	r0, [pc, #244]	; (8000904 <incorrect+0x36>)
@@ -1559,13 +1561,14 @@ secondchar:
  8000814:	f7ff fdd1 	bl	80003ba <KeyGetKey>
 	add r8, r8, #1
  8000818:	f108 0801 	add.w	r8, r8, #1
-	cmp r0, #10 //'8'
+	cmp r0, #char2
  800081c:	280a      	cmp	r0, #10
 	beq correctchar
  800081e:	d012      	beq.n	8000846 <correctchar>
 
 08000820 <thirdchar>:
 
+# Coded as '0' button
 thirdchar:
 	ldr r0, =star
  8000820:	4838      	ldr	r0, [pc, #224]	; (8000904 <incorrect+0x36>)
@@ -1575,13 +1578,14 @@ thirdchar:
  8000826:	f7ff fdc8 	bl	80003ba <KeyGetKey>
 	add r8, r8, #1
  800082a:	f108 0801 	add.w	r8, r8, #1
-	cmp r0, #14 //'0'
+	cmp r0, #char3
  800082e:	280e      	cmp	r0, #14
 	beq correctchar
  8000830:	d009      	beq.n	8000846 <correctchar>
 
 08000832 <fourthchar>:
 
+# Coded as '1' button
 fourthchar:
 	ldr r0, =star
  8000832:	4834      	ldr	r0, [pc, #208]	; (8000904 <incorrect+0x36>)
@@ -1591,7 +1595,7 @@ fourthchar:
  8000838:	f7ff fdbf 	bl	80003ba <KeyGetKey>
 	add r8, r8, #1
  800083c:	f108 0801 	add.w	r8, r8, #1
-	cmp r0, #1 //'1"
+	cmp r0, #char4
  8000840:	2801      	cmp	r0, #1
 	beq correctchar
  8000842:	d000      	beq.n	8000846 <correctchar>
@@ -1634,9 +1638,8 @@ determine:
  8000868:	e031      	b.n	80008ce <incorrect>
 
 0800086a <unlock>:
-	@ ldr r1, [r0, #BSRR]
-	@ orr r1, r1, r2
-	@ str r1, [r0, #BSRR]
+
+unlock:
 
 	#Buzz buzzer
 	mov r0, 1000
@@ -1672,8 +1675,6 @@ scroll_right:
     # Read current data
     ldr r2, [r1, #GPIO_ODR]
  8000892:	694a      	ldr	r2, [r1, #20]
-    # Clear previous ON bit, default 0
-    @ bic r2, r4
     # Write new data
     orr r2, r2, r3
  8000894:	ea42 0203 	orr.w	r2, r2, r3
@@ -1725,8 +1726,8 @@ scroll_right:
 	bl piezoOff
  80008c8:	f7ff fcd6 	bl	8000278 <piezoOff>
 
-	b top
- 80008cc:	e78e      	b.n	80007ec <top>
+	b mainLoop
+ 80008cc:	e78e      	b.n	80007ec <mainLoop>
 
 080008ce <incorrect>:
 
@@ -1764,8 +1765,8 @@ incorrect:
 	bl piezoOff
  80008f8:	f7ff fcbe 	bl	8000278 <piezoOff>
 
-	b top
- 80008fc:	e776      	b.n	80007ec <top>
+	b mainLoop
+ 80008fc:	e776      	b.n	80007ec <mainLoop>
  80008fe:	0000      	.short	0x0000
 	ldr r0, =msg
  8000900:	20000004 	.word	0x20000004
